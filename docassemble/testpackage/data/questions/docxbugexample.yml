@@ -1,0 +1,40 @@
+question: 
+  Sample name
+fields:
+  - TestExampleName: TestExampleName
+    default: test example to show issue
+  - Scenario: scenario
+    choices: 
+      - Document 1 first
+      - Document 2 first
+---
+attachment:
+  name: Document1
+  filename: Document1
+  variable name: dok_Document1
+  docx template file: Document1.docx
+  valid formats:
+    - docx
+---
+attachment:
+  name: Document2
+  filename: Document2
+  variable name: dok_Document2
+  docx template file: Document2.docx
+  valid formats:
+    - docx
+---
+code: |
+  if scenario == 'Document 1 first':
+    final_documents = [ dok_Document1, dok_Document2 ]
+  else: 
+    final_documents = [ dok_Document2, dok_Document1 ]
+---
+mandatory: True
+question: |
+  Genererate documents.
+allow emailing: False
+allow downloading: True
+zip filename: TheDocuments.zip
+attachment code: final_documents
+
