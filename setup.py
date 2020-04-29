@@ -45,7 +45,7 @@ def find_package_data(where='.', package='', exclude=standard_exclude, exclude_d
 setup(name='docassemble.testpackage',
       version='0.0.1',
       description=('A docassemble extension.'),
-      long_description='test package\r\npush to fork\r\n\r\npush to philalegal2\r\n\r\nmade a change',
+      long_description='test package\r\npush to fork\r\n\r\npush to philalegal2\r\n\r\nmade a change\r\nmade another change',
       long_description_content_type='text/markdown',
       author='Jonathan Pyle',
       author_email='admin@admin.com',
